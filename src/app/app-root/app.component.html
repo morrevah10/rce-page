@@ -1,0 +1,26 @@
+
+<section *ngIf="isDesktop">
+    <app-toolbar  [title]="'מרוץ איתן'">
+      <ul>
+        <li><a routerLink="">בית</a></li>
+        <li><a routerLink="info">מידע</a></li>
+        <li><a routerLink="registration">הרשמה</a></li>
+        <li><a routerLink="runners">רצים</a></li>
+        <li><a routerLink="gallery">תמונות</a></li>
+        <li><a routerLink="donation">תרומה</a></li>
+      </ul>
+    </app-toolbar>
+
+    <section class="page">
+        <router-outlet> </router-outlet>
+      </section>
+
+</section>
+
+
+<section *ngIf="!isDesktop">
+    <app-phone-toolbar ></app-phone-toolbar>
+
+</section>
+
+<footer></footer>

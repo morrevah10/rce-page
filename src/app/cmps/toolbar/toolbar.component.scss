@@ -1,0 +1,114 @@
+@import "../../../styles.scss";
+
+
+.toolbar-container {
+  width: 100%; 
+  height: 100px; 
+  align-items: center;
+  background-color: $blue;
+  color: white;
+  @include box-shadow();
+  display: grid;
+  grid-template-areas:
+  "toolbar-data"
+  "toolbar-count"
+  "toolbar-options";
+  justify-content: space-evenly;
+  align-items: center;
+  grid-template-columns: auto auto 1fr;
+
+  @media screen and (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+:host ::ng-deep {
+  ul {
+    display: grid;
+    grid-gap: 30px;
+    grid-auto-flow: column;
+    direction: rtl;
+
+    li {
+      display: inline;
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .logo-img {
+    height: 80px;
+    width: 145px;
+    align-content: center;
+    transform: scale(1.2);
+    }
+
+  .toolbar-data {
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mobile-menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hide by default on larger screens */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+  }
+}
+
+
+
+.contant {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+h3{
+  direction: rtl;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 100px;
+  width: auto;
+  transform: scale(1.5);
+}
+
+.toolbar-data{
+  padding: 1rem;
+  grid-area: "toolbar-data";
+}
+
+.toolbar-count{
+  padding: 1rem;
+  grid-area: "toolbar-count";
+}
+
+.toolbar-options{
+  padding: 1rem;
+  grid-area: "toolbar-options";
+}

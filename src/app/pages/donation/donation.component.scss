@@ -1,0 +1,62 @@
+.donation-container {
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  border-radius: 25px;
+  margin: 20px;
+  padding: 20px;
+
+  h3 {
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+}
+
+.detail-donation {
+  display: flex;
+  justify-content: space-between;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* padding-right: 20px; */
+}
+
+img {
+  max-width: 100%;
+  padding-bottom: 20px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.detail {
+  margin-bottom: 20px;
+}
+
+p {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .detail-donation {
+    flex-direction: column; /* Stack left and right sections vertically */
+  }
+}
+/* .left, */
+/* .right { */
+/* padding: 20px; Remove padding to adjust spacing */
+
+/* }
+  
+  .right {
+    align-items: flex-start; /* Align content to the start (left) */
+/* } */
+/* } */

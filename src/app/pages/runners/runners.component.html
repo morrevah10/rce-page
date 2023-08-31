@@ -1,0 +1,99 @@
+
+
+
+<section *ngIf="isComputerScreen" class="runner-container">
+
+  <div class="items-per-page">
+    <label class="page-label" for="itemsPerPage">כמה להציג בעמוד :</label>
+    <input  type="number" id="itemsPerPage" [(ngModel)]="itemsPerPage" min="1" max="100">
+  </div>
+
+  <div class="search-bar">
+    <label class="search-label" for="search">חיפוש :</label>
+    <input type="text" id="search" [(ngModel)]="searchText" (input)="onSearchInput()" placeholder="הקלד כאן..">
+  </div>
+  <section>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <table mat-table [dataSource]="filteredUsers" class="mat-elevation-z8">
+  
+    <ng-container matColumnDef="firstName">
+      <th mat-header-cell *matHeaderCellDef> שם פרטי </th>
+      <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="surname">
+      <th mat-header-cell *matHeaderCellDef> שם משפחה </th>
+      <td mat-cell *matCellDef="let element"> {{element.surname}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> אימייל </th>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="gender">
+      <th mat-header-cell *matHeaderCellDef> מין </th>
+      <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="section">
+      <th mat-header-cell *matHeaderCellDef> מקצה </th>
+      <td mat-cell *matCellDef="let element"> {{element.section}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  </section>
+
+
+
+<pagination [totalItems]="totalItems" [itemsPerPage]="itemsPerPage" [(ngModel)]="currentPage" class="pagination"></pagination>
+
+</section>
+
+
+<section *ngIf="!isComputerScreen" class="runner-container-phone">
+
+  <div class="items-per-page">
+    <label class="page-label" for="itemsPerPage">כמה להציג בעמוד :</label>
+    <input  type="number" id="itemsPerPage" [(ngModel)]="itemsPerPage" min="1" max="100">
+  </div>
+
+  <div class="search-bar">
+    <label class="search-label" for="search">חיפוש :</label>
+    <input type="text" id="search" [(ngModel)]="searchText" (input)="onSearchInput()" placeholder="הקלד כאן..">
+  </div>
+  
+<section>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <table mat-table [dataSource]="usersToShow" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="firstName">
+    <th mat-header-cell *matHeaderCellDef> שם פרטי </th>
+    <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="surname">
+    <th mat-header-cell *matHeaderCellDef> שם משפחה </th>
+    <td mat-cell *matCellDef="let element"> {{element.surname}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="gender">
+    <th mat-header-cell *matHeaderCellDef> מין </th>
+    <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="section">
+    <th mat-header-cell *matHeaderCellDef> מקצה </th>
+    <td mat-cell *matCellDef="let element"> {{element.section}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</section>
+
+<pagination [totalItems]="totalItems" [itemsPerPage]="itemsPerPage" [(ngModel)]="currentPage" class="pagination"></pagination>
+
+</section>

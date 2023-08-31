@@ -1,0 +1,17 @@
+.dialog-container{
+    direction: rtl;
+    padding :20px 50px 20px 50px;
+}
+
+.title{
+    text-align: center;
+}
+
+.text{
+    margin-bottom: 20px;
+}
+
+.text-ul{
+    margin-bottom: 20px;
+    padding: 0px 32px 0px 32px
+}

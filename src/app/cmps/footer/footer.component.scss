@@ -1,0 +1,218 @@
+@import "../../../styles.scss";
+
+@media screen and (max-width: 770px) {
+    .footer {
+    width: 100%;
+    background-color: #007acc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  .media {
+    direction: rtl;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: #007acc;
+    color: white;
+    padding: 10px;
+    ul {
+      list-style: none;
+      display: grid;
+      grid-gap: 20px;
+      grid-auto-flow: column;
+      justify-items: center;
+      margin: 0;
+      padding: 0;
+
+      li {
+        font-size: 2em;
+        padding: 6px;
+        border-radius: 50%;
+        height: 48px;
+        width: 48px;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        transition: all 0.3s;
+        color: white;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        a {
+          color: white;
+          img {
+            height: 32px;
+            width: 32px;
+   
+          }
+        }
+      }
+    }
+  }
+
+  .copy-right {
+    direction: rtl;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: #007acc;
+    color: white;
+    padding: 10px;
+    ul {
+      list-style: none;
+      display: grid;
+      grid-gap: 20px;
+      grid-auto-flow: column;
+      justify-items: center;
+      margin: 0;
+      padding: 0;
+
+      li {
+        font-size: 2em;
+        padding: 6px;
+        border-radius: 50%;
+        height: 48px;
+        width: 48px;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        transition: all 0.3s;
+        color: white;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        a {
+          color: white;
+          img {
+            height: 32px;
+            width: 32px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+h4{
+    padding: 20px;
+}
+
+
+}
+
+@media screen and (min-width: 770px) {
+    .footer {
+        width: 100%;
+        background-color: #007acc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+      .media {
+        direction: rtl;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        background-color: #007acc;
+        color: white;
+        padding: 10px;
+        ul {
+          list-style: none;
+          display: grid;
+          grid-gap: 20px;
+          grid-auto-flow: column;
+          justify-items: center;
+          margin: 0;
+          padding: 0;
+    
+          li {
+            font-size: 2em;
+            padding: 6px;
+            border-radius: 50%;
+            height: 48px;
+            width: 48px;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            transition: all 0.3s;
+            color: white;
+    
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.2);
+            }
+    
+            a {
+              color: white;
+              img {
+                height: 32px;
+                width: 32px;
+       
+              }
+            }
+          }
+        }
+      }
+    
+      .copy-right {
+        direction: rtl;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        background-color: #007acc;
+        color: white;
+        padding: 10px;
+        ul {
+          list-style: none;
+          display: grid;
+          grid-gap: 20px;
+          grid-auto-flow: column;
+          justify-items: center;
+          margin: 0;
+          padding: 0;
+    
+          li {
+            font-size: 2em;
+            padding: 6px;
+            border-radius: 50%;
+            height: 48px;
+            width: 48px;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            transition: all 0.3s;
+            color: white;
+    
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.2);
+            }
+    
+            a {
+              color: white;
+              img {
+                height: 32px;
+                width: 32px;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    
+    h4{
+        padding: 20px;
+    }
+
+  
+  }

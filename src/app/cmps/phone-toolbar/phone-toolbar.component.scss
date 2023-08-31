@@ -1,0 +1,27 @@
+@import "../../../styles.scss";
+
+mat-sidenav-container {
+  height: calc(205vh - 115vh);
+}
+
+mat-sidenav {
+  width: 200px;
+  background-color: #eee;
+}
+mat-toolbar-row {
+  background-color: $blue;
+  justify-content: center;
+}
+
+.phone-toolbar {
+  color: white;
+
+  .menu-img {
+    height: 32px;
+    width: 32px;
+  }
+
+  .logo-img {
+    height: 120px;
+  }
+}
