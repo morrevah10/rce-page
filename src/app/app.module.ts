@@ -51,6 +51,7 @@ import { DonationComponent } from './pages/donation/donation.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { GalleryCarouselComponent } from './cmps/gallery-carousel/gallery-carousel.component';
 import { PhoneToolbarComponent } from './cmps/phone-toolbar/phone-toolbar.component';
+import { MessageModalComponent } from './cmps/message-modal/message-modal.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { PhoneToolbarComponent } from './cmps/phone-toolbar/phone-toolbar.compon
     GalleryComponent,
     GalleryCarouselComponent,
     PhoneToolbarComponent,
+    MessageModalComponent,
   ],
   imports: [
     BrowserModule,

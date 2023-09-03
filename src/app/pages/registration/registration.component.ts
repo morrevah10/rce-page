@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogContantComponent } from '../../cmps/health/dialog-contant/dialog-contant.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { MessageModalComponent } from 'src/app/cmps/message-modal/message-modal.component';
 
 
 
@@ -51,16 +52,22 @@ export class RegistrationComponent {
         // Handle a response from the server, such as displaying a success message or navigating to another page
         this.isLoading = false;
 
-        this.snackBar.open('הרשמה בוצעה בהצלחה', 'סגירה', {
-          duration: 2000, 
-          panelClass: ['blue-snackbar']
-        });
+        this.openMessageModal();
 
-        this.router.navigate(['/donation']);
+        // this.snackBar.open('הרשמה בוצעה בהצלחה', 'סגירה', {
+        //   duration: 1000000, 
+        //   panelClass: ['blue-snackbar']
+        // });
+
+        // setTimeout(() => {
+        //   this.router.navigate(['/donation']);
+        // }, 144000); 
+
+        
       },
       (error) => {
         console.error('Error registering user:', error);
-        // Handle the error, such as displaying an error message to the user
+       
         this.isLoading = false;
       }
     );
@@ -83,6 +90,17 @@ export class RegistrationComponent {
   }
 
 
+  openMessageModal() {
+    const dialogRef = this.dialog.open(MessageModalComponent, {
+      disableClose: true, // Prevent closing by clicking outside or pressing Esc
+    });
+
+    // Set a timeout to navigate to another page after a certain duration
+    setTimeout(() => {
+      dialogRef.close(); // Close the modal
+      this.router.navigate(['/donation']); // Navigate to another page
+    }, 5000); // Adjust the timeout duration as needed (e.g., 5000 milliseconds = 5 seconds)
+  }
 
 
   }
